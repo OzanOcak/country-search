@@ -1,10 +1,10 @@
-import { countries } from "../api/country-mock";
+//import { countries } from "../api/country-mock";
 import Card from "./Card";
-const CardList = () => {
+const CardList = ({ users = [] }) => {
   return (
     <div className="mx-auto">
-      {countries.map((country) => (
-        <Card key={country.id} data={country} />
+      {users.map((user) => (
+        <Card key={user.id} user={user} />
       ))}
     </div>
   );
